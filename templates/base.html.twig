@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/styleFront.css') }}" rel="stylesheet">
+  
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    </head>
+    <body>
+    
+    <header>
+    <a href="/"><img class='logo' src="/images/logo.png"/></a>
+        <nav class="navBar">
+           
+           
+                <ul>
+                    <li class='onglet-nav'>
+                        <a href="/">Home<div class="souligne"></div></a>
+                    </li>
+                     <li class='onglet-nav'>
+                        <a href="/blog">Blog<div class="souligne"></div></a>
+                    </li>
+                     <li class='onglet-nav'>
+                        <a href="/profil">Trouve ton pote<div class="souligne"></div></a>
+                    </li>
+                     <li class='onglet-nav'>
+                        <a href="/profil/nouveau">Poste ton projet<div class="souligne"></div></a>
+                    </li>
+                       <li class='onglet-nav'>
+                        <a href="/contact">Contact<div class="souligne"></div></a>
+                    </li>
+
+                    <li class='onglet-nav'>
+                        <a href="/histoire">Notre histoire<div class="souligne"></div></a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <ul class="">
+                 </li>
+                       <li class="">
+                        <a class="" href="/client">Créer son compte client</a>
+                    </li>
+
+                       </li>
+                        {% if app.user %}
+ <li class="nav-item active">
+                        <a class="" href="/logout">Déconnexion</a>
+                    </li>
+                        {% endif %}
+                        {% if app.user == null %}
+                       <li class="">
+                        <a class="" href="/login">Se connecter</a>
+                    </li>
+
+                      {% endif %}
+                      
+                </ul>
+            
+        </nav>
+    </header>
+
+<main role="main">
+
+   
+
+        {% block body %}
+
+  
+       {% endblock %}
+         {% block content %}
+   
+
+
+       {% endblock %}
+
+
+</main>
+<script type="text/javascript" src="{{ asset('assets/js/script.js') }}" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.1/jump.min.js"></script>
+    </body>
+</html>

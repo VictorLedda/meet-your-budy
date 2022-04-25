@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Melting potes{% endblock %}
+
+{% block body %}
+
+<section class='section-accueil'>
+<div class='CustomContainer content-section-accueil'>
+<h2>Lorem ipsum dolor sit amet</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida felis et rutrum imperdiet. Sed quis pellentesque mauris. Nullam suscipit tristique egestas. Nunc sagittis ipsum ac sem consectetur condimentum. In dolor velit, egestas eget pulvinar vitae, scelerisque ac eros. Cras interdum nisi sed tellus volutpat eleifend. Mauris sed varius nunc, a consequat arcu.
+
+Sed eu ultrices nulla. Nullam velit sem, feugiat dictum ligula a, interdum euismod dolor. Duis felis ipsum, iaculis vel odio sed, cursus euismod urna. In pellentesque, urna nec cursus feugiat, risus massa commodo metus, sed blandit magna ex sit amet augue. Phasellus ac lacus orci. Nullam pellentesque ut mauris id fringilla. Sed mattis justo sit amet lacinia mollis. Curabitur tincidunt maximus mi quis suscipit. Suspendisse lorem est, congue maximus vehicula eu, sagittis ac ligula.</p>
+<div class='boutons'>
+<a href='profil'><button class='bouton-orange bouton-orange-plein'>Trouve tes potes de voyage</button></a>
+<a href='profil/nouveau'<button class='bouton-orange bouton-orange-vide'>Poste ton projet</button></a>
+</div>
+</div>
+</section>
+
+
+        
+        {% if app.user %}
+        <div class="mb-3">
+            Tu es connecté en tant que  {{ app.user.login }}
+        </div>
+    {% endif %}
+ 
+
+      <section class='icons-chercher-potes'>
+        <h2 class='icons-chercher-potes-titre'>Comment fonctionne melting potes ?</h2>
+        <div class='wrapper-icons-chercher-potes'>
+        <div class='icon-chercher-potes'>
+   <img class='image-icon-chercher-potes' src='/images/fleche.png'/>
+    <h3>Connectes toi !</h3>    
+    </div>
+    <div class='icon-chercher-potes'>
+     <img class='image-icon-chercher-potes' src='/images/loupe.png'/>
+    <h3>Trouves ton pote !</h3>    
+    </div>
+    <div class='icon-chercher-potes'>
+     <img class='image-icon-chercher-potes' src='/images/valise.png'/>
+    <h3>Partez ensemble !</h3>    
+    </div>
+
+        </div>
+       
+        </section>
+        <section class='grid-destinations'>
+        <div class='grid-all-destinations'>
+        <div class='grid-one grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/> Australie</h4></div>
+        <div class='grid-two grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Espagne</h4></div>
+        <div class='grid-three grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Etats Unis</h4></div>
+        <div class='grid-four grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>France</h4></div>
+        <div class='grid-five grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Grece</h4></div>
+        <div class='grid-six grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Indonesie</h4></div>
+        <div class='grid-seven grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Mexique</h4></div>
+        <div class='grid-eight grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Perou</h4></div>
+        <div class='grid-nine grid-d'><h4 class='grid-destination-text'><img class='icon-destination' src='/images/icon-destination.png'/>Thailande</h4></div>
+        
+        </div>
+
+<div class='all-destinations-wrapper-button'>
+        <button class='button-all-destinations'>Voir toutes les destinations</button>
+</div>
+        </section>
+
+    <section class='temoignages'>
+        <h3>Témoignages !</h3>
+        <div class='wrapper-temoignages'>
+        <div class='temoignage'>
+        <img class='image-temoignage' src='/images/person.png' />
+        <p class='paragraphe-temoignage'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla lobortis orci at ultricies. Donec nisl metus, volutpat eu convallis quis, placerat tincidunt urna. Donec pharetra odio in odio laoreet, eu consequat arcu vestibulum. Nulla mauris orci, varius sit amet justo in, gravida congue risus. Sed iaculis dui feugiat lobortis consequat. Curabitur et mauris quis sapien gravida mollis. Mauris vehicula felis vel felis blandit, condimentum sollicitudin nisl tempor.
+        </p>
+        </div>
+        <div class='temoignage'>
+         <img class='image-temoignage' src='/images/person.png' />
+        <p class='paragraphe-temoignage'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla lobortis orci at ultricies. Donec nisl metus, volutpat eu convallis quis, placerat tincidunt urna. Donec pharetra odio in odio laoreet, eu consequat arcu vestibulum. Nulla mauris orci, varius sit amet justo in, gravida congue risus. Sed iaculis dui feugiat lobortis consequat. Curabitur et mauris quis sapien gravida mollis. Mauris vehicula felis vel felis blandit, condimentum sollicitudin nisl tempor.
+        </p>
+        </div>
+        <div class='temoignage'>
+         <img class='image-temoignage' src='/images/person.png' />
+        <p class='paragraphe-temoignage'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla lobortis orci at ultricies. Donec nisl metus, volutpat eu convallis quis, placerat tincidunt urna. Donec pharetra odio in odio laoreet, eu consequat arcu vestibulum. Nulla mauris orci, varius sit amet justo in, gravida congue risus. Sed iaculis dui feugiat lobortis consequat. Curabitur et mauris quis sapien gravida mollis. Mauris vehicula felis vel felis blandit, condimentum sollicitudin nisl tempor.
+        </p>
+        
+        </div>
+        
+        </div>
+    </section>
+{% endblock %}

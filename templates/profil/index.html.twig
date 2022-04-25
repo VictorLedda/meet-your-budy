@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil index{% endblock %}
+
+{% block body %}
+    <h1 class='titre-profils'>Tous les profils</h1>
+    <section class='recherche'>
+
+    </section>
+  <section class='all-profils container'>
+          
+      
+        {% for profil in profils %}
+ 
+      <a  class='card-profil' href="{{ path('profil_show', {'id': profil.id}) }}"> 
+               
+               <img class='card-profil-img' src="{{ asset('images/profils/' ~ profil.image) }}" />
+             
+       
+              
+             
+             <div class='infos-card-profil'>
+               <h4>  Prenom :  {{ profil.prenom }}<h4>
+              
+                <h4>  Age :  {{ profil.age }}<h4>
+              
+                <h4 class="infos-card-profil-destination">   Destination : Espagne<h4>
+               {{ profil.destination ? profil.destination|join(', ') : '' }}
+                 <h4>   Date_depart :   {{ profil.dateDepart ? profil.dateDepart|date('Y-m-d') : '' }}<h4>
+             
+                <h4>  Description<h4>
+              <p class='infos-card-profil-paragraphe'> {{ profil.description }}</p>
+                {# <h4>  Tags<h4>
+               {{ profil.tags ? profil.tags|join(', ') : '' }}
+                #}
+                     
+                   {# <a href="{{ path('profil_edit', {'id': profil.id}) }}">edit</a> #}
+              
+    
+
+      </div>
+      </a>
+        {% endfor %}
+       </section>
+
+    {# <a href="{{ path('profil_new') }}">Create new</a> #}
+{% endblock %}

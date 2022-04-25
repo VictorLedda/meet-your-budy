@@ -1,0 +1,558 @@
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.souligne-titre{
+  position: relative;
+  z-index: -100;
+  bottom: 20px;
+  width: 330px;
+  margin-left: 30px;
+  height: 15px;
+  background-color: #EC855F;
+}
+
+.souligne{
+  
+  position: relative;
+  top: 6px;
+    height: 3px;
+    width: 87%;
+    margin: auto;
+    background-color: #EC855F ;
+    
+    background: linear-gradient(to right, #EC855F 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .35s ease-out;
+    
+  }
+  
+  .onglet-nav:hover .souligne{
+    
+        background-position: left bottom;
+    
+  }
+
+.container{
+  margin: auto;
+  width: 75%;
+}
+.image-blog{
+    height: 300px;
+    width: auto;
+}
+
+.article{
+    padding-top: 140px;
+}
+
+.titre-blog{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+
+.paragraphe-blog{
+    height: 150px;
+    overflow: hidden;
+}
+
+.bloc-article{
+    display: flex;
+    
+}
+
+.navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.informations-article{
+    padding-left: 60px;
+}
+.content__to-left, .content__to-right, .content__to-up, .content__to-scale, .content__to-down {
+    opacity: 0;
+  }
+
+
+   
+  
+  .is-inviewport .content__to-left {
+      animation: toLeft 0.5s ease-in-out forwards;
+      animation-delay: 0.3s;
+      
+    }
+
+    .is-inviewport   .content__to-right {
+      animation: toRight 0.5s ease-in-out forwards;
+      animation-delay: 0.5s;
+    
+    }
+
+    .is-inviewport  .content__to-up {
+      animation: toUp 0.5s ease-in-out forwards;
+      
+    }
+    .is-inviewport  .content__to-down {
+        animation: toDown 0.5s ease-in-out forwards;
+        
+      }
+
+    .is-inviewport  .content__to-scale {
+      animation: toScale 0.5s ease-in-out forwards;
+      animation-delay: 1s;
+     
+    }
+  
+
+    @keyframes toRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes toLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes toUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes toDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+    @keyframes toScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    header{
+      height: 90px;
+      display: flex;
+     
+    }
+    header .navBar{
+      width: 90%;
+      
+      display: flex;
+      justify-content: space-between;
+    }
+    header .navBar ul{
+      margin-top: 20px;
+      display: flex;
+      list-style: none;
+    }
+    header .navBar ul li {
+     margin-left: 20px;
+     margin-right: 20px;
+     transition: .4s;
+    }
+    header .navBar ul li a{
+      color: black;
+      font-weight: 500;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+
+  
+.content-section-accueil{
+    padding-top: 120px;
+}
+    .section-accueil{
+      
+      width: 100%;
+      height: 1000px;
+      background-image: url("../../images/voyager.jpg");
+      background-size: cover;
+    }
+
+    .section-accueil p{
+      max-width: 800px;
+      text-align: justify;
+      margin-top: 50px;
+    
+    }
+    .section-accueil h2{
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .bouton-orange-plein{
+background-color: #EC855F;
+margin-right: 50px;
+    }
+    .bouton-orange-plein:hover{
+      transition-duration: 0.8s;
+      background-color: transparent;
+    }
+    .bouton-orange-vide:hover{
+      transition-duration: 0.8s;
+      background-color: #EC855F;
+    }
+    .bouton-orange-vide{
+      background-color: transparent;
+          }
+          .boutons{
+            margin-top: 40px;
+          }
+
+          .logo{
+            margin-left: 100px;
+            width: 10%;
+            width: 100px;
+            height: 100px;
+          }
+.bouton-orange{
+  color: white;
+  border-radius: 1000px;
+  padding: 10px 40px 10px 40px;
+  font-size:20px;
+ border: 3px solid #EC855F
+}
+    .CustomContainer{
+      width: 75%;
+      margin: auto;
+    }
+
+    .titre-profils{
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+    .bloc-article-consulter{
+      color: black
+    }
+    .bloc-article-consulter:hover{
+      color: black
+    }
+    .all-profils{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .card-profil:hover{
+      color: black;
+      text-decoration: none;
+    }
+    .card-profil{
+      color: black;
+      overflow: hidden;
+      width: 30%;
+      margin-bottom: 60px;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+
+    .infos-card-profil-destination{
+      margin-top: 20px;
+    }
+    .infos-card-profil-paragraphe{
+      max-height: 100px;
+      overflow: hidden;
+      font-weight: 400;
+      text-align: justify;
+      font-size: 12px;
+    }
+
+    .infos-card-profil{
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .card-profil-img{
+      width: 100%;
+    }
+
+    .card-profil h4{
+      font-size: 15px;
+    }
+
+    .consulter-profil-retour{
+      color: black;
+      margin-bottom: 20px;
+    }
+    .consulter-profil-image{
+      width: 150px;
+      height: 150px;
+    }
+    .consulter-profil-image-rond{
+      margin-right: 100px;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 1000px;
+    }
+
+    .customContainerProfil{
+      
+      width: 80%;
+      margin: 100px auto 0px auto;
+    }
+
+    .consulter-profil-infos{
+      margin-bottom: 150px;
+      display: flex;
+    }
+.container-image{
+  height: 500px;
+ 
+}
+.image-blog{
+  width: 400px;
+  height: 280px;
+}
+.titre-article-blog{
+  text-align: center;
+margin-top: 30px;
+  border-radius: 10px;
+}
+    .image-article-blog{
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 500px;
+    }
+
+    .paragraphe-article{
+      margin: 100px auto 0px auto;
+      width: 80%;
+      text-align: justify;
+    }
+.article-blog-retour{
+  width: 80%;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 300;
+}
+    .article-blog-retour{
+      color: black;
+    }
+
+    .article-blog-retour:hover{
+      color: black;
+    }
+
+
+
+    /*    Home    */
+
+.icons-chercher-potes{
+text-align: center;
+  height: 400px;
+
+}
+
+.image-icon-chercher-potes{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 25px;
+}
+
+
+.wrapper-icons-chercher-potes{
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
+.icons-chercher-potes-titre{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+
+  padding-bottom: 30px;
+}
+.icon-chercher-potes{
+
+  width: 33%;
+  text-align: center;
+}
+
+.grid-destinations{
+  height: 1000px;
+  width: 90%;
+  margin: auto;
+
+  justify-content: center;
+}
+.grid-all-destinations{
+  display: grid;
+ row-gap : 5px;
+ column-gap : 5px;
+ grid-template :  "a a b c" 300px
+ "d e f f" 300px
+ "g g h i" 300px / 20fr 20fr 20fr 20fr;
+ column-gap: 1fr;
+}
+
+.grid-d{
+ display: flex;
+ flex-direction: column-reverse;
+  border-radius: 10px;
+}
+
+.grid-one{
+  grid-area: a;
+  background-image: url('../../images/grid/australie.jpg');
+  background-size: cover;
+  background-position: center right;
+}
+
+.grid-two{
+  grid-area: b;
+  background-image: url('../../images/grid/espagne.jpg');
+  background-size: cover;
+}
+
+.grid-three{
+  grid-area: c;
+  background-image: url('../../images/grid/etatsUnis.jpg');
+  background-size: cover;
+}
+
+.grid-four{
+  grid-area: d;
+  background-image: url('../../images/grid/france.jpg');
+  background-size: cover;
+}
+.grid-five{
+  grid-area: e;
+  background-image: url('../../images/grid/grece.jpg');
+  background-size: cover;
+}
+
+.grid-six{
+  grid-area: f;
+  background-image: url('../../images/grid/indonesie.jpg');
+  background-size: cover;
+}
+
+.grid-seven{
+  grid-area: g;
+  background-image: url('../../images/grid/mexique.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.grid-eight{
+  grid-area: h;
+  background-image: url('../../images/grid/perou.jpg');
+  background-size: cover;
+}
+.grid-nine{
+  grid-area: i;
+  background-image: url('../../images/grid/thailande.jpg');
+  background-size: cover;
+}
+
+.icon-destination{
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+.all-destinations-wrapper-button{
+  text-align: center;
+  width: 100%;
+}
+.button-all-destinations{
+  margin-top: 30px;
+  border-radius: 100px;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  background-color: #EC855F;
+  color: white;
+}
+
+
+.grid-destination-text{
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-top: 340px;
+  padding-bottom: 20px;
+  
+}
+
+
+.wrapper-temoignages{
+  width: 80%;
+  margin: auto;
+  display: flex;
+justify-content: space-around;
+}
+.temoignages{
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.temoignages h3{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.temoignage{
+  border: 2px solid #EC855F;
+  border-radius: 10px;
+  width: 28%;
+  height: 450px;
+  box-shadow: 5px 6px 30px -13px #000000;
+ 
+}
+
+
+.image-temoignage{
+  border-radius: 200px;
+  height: 100px;
+  width: 100px;
+  margin: 30px auto 0px auto;
+  display: flex;
+  justify-content: center;
+}
+.paragraphe-temoignage{
+  padding-top: 60px;
+  text-align: justify;
+  width: 85%;
+  margin: auto;
+  font-size: 15px;
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog index
+{% endblock %}
+
+{% block body %}
+
+	<h1 class='titre-blog'>Notre Blog</h1>
+
+
+	<div class="container">
+		{% for blog in blogs %}
+			<div class='article'>
+
+
+				<div class='bloc-article scroll-part is-invert'>
+					<img class='content__to-down image-blog' src="{{ asset('images/blog/' ~ blog.image) }}"/>
+					<div class='informations-article content__to-down'>
+						<h1 class="titre-article"></h1>
+						<p class='paragraphe-blog'>{{ blog.texte }}</p>
+						<h4>Ecrit le{{ blog.date ? blog.date|date('Y-m-d') : '' }}</h4>
+						<a class='bloc-article-consulter' href="{{ path('blog_show', {'id': blog.id}) }}">Consulter l'article</a>
+					</div>
+				</div>
+
+				<!--   <a href="{{ path('blog_edit', {'id': blog.id}) }}">edit</a> -->
+
+			</div>
+		{% endfor %}
+
+	</div>
+
+{% endblock %}

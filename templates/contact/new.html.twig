@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<section class='container'>
+    <h1>Nous envoyer un message</h1>
+
+    {{ include('contact/_form.html.twig') }}
+</section>
+ <!--   <a href="{{ path('contact_index') }}">back to list</a> -->
+{% endblock %}
